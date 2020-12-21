@@ -14,7 +14,7 @@ public class Main {
         bookLists[9]=new FictionBook(2005,"name2",24000,"author5","IE9",0);
         double sumPrice=library.getSumPrice();
         double amoutOfJAVA=library.countBookOfLanguage("java");
-        double sumPromotionalPrice=library.getSumPromotionalPrice();
+        double sumPromotionalPrice=library.getSumPromotionalPrice(10);
         System.out.println("sum price = "+sumPrice+" amount of java language = "+amoutOfJAVA+" sum of promotinal price = "+sumPromotionalPrice);
 
     }

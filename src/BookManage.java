@@ -1,5 +1,6 @@
 public class BookManage {
-    private Book[] bookLists=new Book[10];
+    private final int MAX_OF_LENGHT=10;
+    private Book[] bookLists=new Book[MAX_OF_LENGHT];
 
     public Book[] getBookLists() {
         return bookLists;
@@ -22,12 +23,12 @@ public class BookManage {
         }
         return count;
     }
-    public double getSumPromotionalPrice(){
+    public double getSumPromotionalPrice(int percent){
         double sum=0;
         for (Book book:bookLists) {
             if (book instanceof FictionBook){
                 FictionBook fictionBook = (FictionBook) book;
-                fictionBook.setDiscount(10);
+                fictionBook.setDiscount(percent);
                 sum+=fictionBook.getPromotionalPrice();
             }
         }
